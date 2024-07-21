@@ -1,7 +1,5 @@
 #include <stdint.h>
 
-struct GLFWwindow;
-
 namespace atom
 {
 
@@ -11,16 +9,15 @@ namespace atom
 		Window(uint32_t width, uint32_t height, const char* title);
 		~Window();
 
-		void OnUpdate();
+		virtual void OnUpdate() = 0;
 
-		bool ShouldClose() const;
+		virtual bool ShouldClose() const = 0;
 
 	protected:
 		uint32_t m_Width;
 		uint32_t m_Height;
 		const char* m_Title;
 
-		GLFWwindow* m_Window;
 	};
 
 }
