@@ -1,5 +1,7 @@
 #include <memory>
 
+#include "Win32Window.h"
+
 namespace atom
 {
 	class Window;
@@ -15,6 +17,7 @@ namespace atom
 		};
 
 	public:
+		Application(const Properties& props);
 		~Application() = default;
 
 		Application(const Application&) = delete;
@@ -24,9 +27,8 @@ namespace atom
 		Application& operator=(Application&&) = delete;
 
 	public:
-		static Application& GetInstance();
+		static Application* GetInstance();
 
-		void Init(const Properties& props);
 		void Run();
 	private:
 		Application() = default;
