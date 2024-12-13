@@ -5,7 +5,11 @@ add_library(Atom src/Application.h
 		 src/Window.h
 		 src/Window.cpp
 		 src/Win32Window.h
-		 src/Win32Window.cpp)
+		 src/Win32Window.cpp
+		 src/GraphicsContext.h
+		 src/GraphicsContext.cpp
+		 src/D3D12Context.h
+		 src/D3D12Context.cpp)
 
 if(WIN32)
 target_compile_definitions(Atom PRIVATE AT_PLATFORM_WINDOWS)

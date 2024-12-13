@@ -5,6 +5,8 @@
 #include <iostream>
 #include <mutex>
 
+#include <imgui/imgui.h>
+
 static atom::Application* s_Application = nullptr;
 
 namespace atom
@@ -43,6 +45,7 @@ namespace atom
             m_Window->OnUpdate();
             if (m_Window->ShouldClose())
                 break;
+
 
         }
     }
