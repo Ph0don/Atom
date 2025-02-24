@@ -32,3 +32,8 @@
 *.app
 
 Build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+

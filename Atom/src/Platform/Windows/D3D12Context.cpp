@@ -1,3 +1,4 @@
+#pragma once
 #include "D3D12Context.h"
 
 #pragma comment(lib, "dxgi.lib")

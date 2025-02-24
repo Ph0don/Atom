@@ -1,7 +1,6 @@
 #include "Window.h"
 
 #include <iostream>
-#include <glfw/glfw3.h>
 
 namespace atom
 {

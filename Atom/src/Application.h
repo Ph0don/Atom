@@ -1,6 +1,5 @@
+#pragma once
 #include <memory>
-
-#include "Win32Window.h"
 
 namespace atom
 {
@@ -18,7 +17,7 @@ namespace atom
 
 	public:
 		Application(const Properties& props);
-		~Application() = default;
+		~Application();
 
 		Application(const Application&) = delete;
 		void operator=(const Application&) = delete;
