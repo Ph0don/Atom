@@ -29,3 +29,4 @@ target_include_directories( Atom PUBLIC
 target_compile_features(Atom PRIVATE cxx_std_17)
 
 target_link_libraries(Atom PUBLIC glfw)
+target_link_libraries(Atom PUBLIC imgui)

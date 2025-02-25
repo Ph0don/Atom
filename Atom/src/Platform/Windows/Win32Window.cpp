@@ -1,8 +1,10 @@
 #include "Win32Window.h"
 
 #include <iostream>
-#include <imgui/backends/imgui_impl_win32.h>
-#include <imgui/backends/imgui_impl_dx12.h>
+#include "imgui/imgui.h"
+#include "imgui/backends/imgui_impl_win32.h"
+//#include <imgui/backends/imgui_impl_win32.h>
+//#include <imgui/backends/imgui_impl_dx12.h>
 
 namespace atom
 {
@@ -55,7 +57,12 @@ namespace atom
 
 		ShowWindow(m_WindowHandle, SW_SHOWNORMAL);
 
-		
+		ImGui::CreateContext();
+		auto& io = ImGui::GetIO();
+		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+		io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+		io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+
 	}
 	Win32Window::~Win32Window()
 	{
