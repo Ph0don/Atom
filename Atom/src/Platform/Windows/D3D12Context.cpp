@@ -1,5 +1,7 @@
+#ifdef AT_PLATFORM_WINDOWS
 #pragma once
 #include "D3D12Context.h"
+
 
 #pragma comment(lib, "dxgi.lib")
 #pragma comment(lib, "d3d12.lib")
@@ -9,3 +11,4 @@ namespace atom
 {
 
 }
+#endif

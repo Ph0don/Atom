@@ -1,3 +1,4 @@
+#ifdef AT_PLATFORM_WINDOWS
 #pragma once
 
 #include "GraphicsContext.h"
@@ -42,3 +43,4 @@ namespace atom
     };
 
 }
+#endif

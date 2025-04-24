@@ -1,5 +1,5 @@
+#ifdef AT_PLATFORM_WINDOWS
 #include "Win32Window.h"
-
 #include <iostream>
 #include "imgui/imgui.h"
 #include "imgui/backends/imgui_impl_win32.h"
@@ -119,3 +119,4 @@ namespace atom
 		return DefWindowProc(hwnd,msg,wParam,lParam);
 	}
 }
+#endif

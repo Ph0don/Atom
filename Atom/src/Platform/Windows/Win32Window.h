@@ -1,6 +1,6 @@
+#ifdef AT_PLATFORM_WINDOWS
 #pragma once
 #include "Window.h"
-
 #include <Windows.h>
 
 namespace atom
@@ -25,3 +25,4 @@ namespace atom
 	};
 
 }
+#endif

@@ -8,18 +8,22 @@ target_sources(Atom PRIVATE
 		 src/GraphicsContext.cpp)
 
 if(WIN32)
-target_compile_definitions(Atom PRIVATE AT_PLATFORM_WINDOWS)
+add_compile_definitions(AT_PLATFORM_WINDOWS)
+endif()
+if(LINUX)
+add_compile_definitions(AT_PLATFORM_LINUX)
+endif()
+
 target_include_directories(Atom PRIVATE src/Platform/Windows)
 target_sources(Atom PRIVATE
 		 src/Platform/Windows/Win32Window.cpp
          src/Platform/Windows/D3D12Context.cpp)
-endif()
+#endif()
 
-if(LINUX)
-target_compile_definitions(Atom PRIVATE AT_PLATFORM_LINUX)
+#if(LINUX)
 target_include_directories(Atom PRIVATE src/Platform/Linux)
 target_sources(Atom PRIVATE src/Platform/Linux/GLFWWindow.cpp)
-endif()
+#endif()
 
 target_include_directories( Atom PUBLIC
 	src
